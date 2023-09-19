@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: hsl(257, 40%, 49%);
+    --bttn-hover-color: hsl(300, 69%, 71%);
+    --txt-color: #fff;
+    --font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: var(--bg-color) url(images/bg-desktop.svg) no-repeat;
+    color: var(--txt-color);
+    font-family: var(--font-family);
+    padding: 2em 4em;
+}   
+
+.container{
+    max-width: 1300px;
+}
+
+/* main content */
+
+header > img{
+    transform: scale(.8);
+    transform-origin: left;
+}
+
+main{
+    display: flex;
+    gap: 3em;
+    margin: 0em auto;
+    margin-top: 5.5em;
+}
+
+main > img{
+    width: 55%;
+}
+
+section{
+    max-width: 500px;
+    margin-top: 2.5em;
+}
+
+section > h1{
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: .6em;
+}
+
+section > p{
+    margin-bottom: 1.5em;
+}
+
+section > button{
+    padding: 1em 4em;
+    border-radius: 30px;
+    border: none;
+    background-color: #fff;
+    color: var(--bg-color);
+    font-size: 1em;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+section > button:hover{
+    background-color: var(--bttn-hover-color);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+section > button:active{
+    transform: scale(.95);
+    box-shadow: none;
+    transition: none;
+}
+
+/* Footer */
+
+footer{
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    right: 5em;
+}
+
+ul{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a > img{
+    width: 2em;
+    /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.4); */
+}
+
+@media screen and (max-width: 1024px) {
+    body{
+        padding: 3em;
+        background-image: none;
+    }
+
+    main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main > img{
+        width: 80%;
+    }
+
+    section{
+        text-align: center;
+        margin-bottom: 4em;
+    }
+
+    footer{
+        position: unset;
+        margin-bottom: 1em;
+    }
+
+    ul{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 468px){
+    body{
+        background-image: url(images/bg-mobile.svg);
+        background-size: contain;
+        padding: 1em 2em;
+    }
+
+    header > img{
+        transform: scale(.5);
+    }
+
+    main{
+        margin-top: 2em;
+    }
+
+    main > img{
+        width: 100%;
+    }
+
+    section{
+        margin-top: 1em;
+    }
+
+    section > h1{
+        font-size: 1.5em;
+    }
+    
+    section > p{
+        font-size: .95em;
+    }
+
+    ul li a > img{
+        width: 1.5em;
+    }
+}
